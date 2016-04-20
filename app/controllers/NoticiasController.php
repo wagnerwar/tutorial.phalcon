@@ -41,7 +41,8 @@ class NoticiasController extends Controller
               $dta = str_replace("/","-",$this->request->getPost("data_publicacao"));
               $dta = date("Y-m-d",strtotime($dta));
               $noticia->data_publicacao = $dta;
-
+              $noticia->status = "PUBLICADO";
+              
               if($noticia->save() == false){
 
                 $this->flash->error("Erro de base de dados");

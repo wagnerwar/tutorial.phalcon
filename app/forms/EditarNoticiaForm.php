@@ -26,6 +26,19 @@ class EditarNoticiaForm extends Form{
       $element->setFilters(array('striptags','string'));
       $this->add($element);
 
+
+        $element =  new Select(
+              "status",
+              array(
+                  "PUBLICADO" => 'Publicar',
+                  "PRIVADO" => 'Privado'
+              )
+          );
+
+        $element->setLabel("Status");
+        $this->add($element);
+
+
       // Data
       $element = new Date("data_publicacao");
       $element->setLabel("Data de publicacao");

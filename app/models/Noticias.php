@@ -7,6 +7,7 @@ class Noticias extends Model{
   public $nome;
   public $descricao;
   public $data_publicacao;
+  public $status;
 
   public function  getDataPublicacao(){
     return date("Y-m-d",strtotime($this->data_publicacao));

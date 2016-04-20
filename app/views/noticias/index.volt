@@ -9,6 +9,7 @@
             <th>Titulo</th>
             <th>Descricao</th>
             <th>Data de publicacao</th>
+            <th>Status</th>
             <th>Editar</th>
             <th>Excluir</th>
         </tr>
@@ -20,6 +21,7 @@
             <td>{{ noticia.nome }}</td>
             <td>{{ noticia.descricao }}</td>
             <td>{{ noticia.getDataPublicacao()  }}</td>
+            <td>{{ noticia.status  }}</td>
             <td width="7%">{{ link_to("noticias/editar/" ~ noticia.id, '<i class="glyphicon glyphicon-edit"></i> Edit', "class": "btn btn-default") }}</td>
             <td width="7%">{{ link_to("noticias/deleteNoticia/" ~ noticia.id, '<i class="glyphicon glyphicon-remove"></i> Delete', "class": "btn btn-default") }}</td>
         </tr>

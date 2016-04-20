@@ -37,7 +37,8 @@ try {
   APP_PATH . $config->application->controllersDir,
   APP_PATH . $config->application->modelsDir,
   APP_PATH . $config->application->viewsDir,
-  APP_PATH . $config->application->formsDir
+  APP_PATH . $config->application->formsDir,
+  APP_PATH . $config->application->hooksDir
   )
 )->register();
 

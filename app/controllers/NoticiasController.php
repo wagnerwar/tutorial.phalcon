@@ -110,7 +110,7 @@ public function updateNoticiaAction(){
         $this->flash->error("Erro de base de dados");
         return $this->dispatcher->forward(array('controller' => 'noticias','action' => 'editar','params' => array('id' => $id) ));
     }else{
-      $this->flash->success("Sucesso");
+      $this->flash->success("Sucesso: ");
       return $this->dispatcher->forward(array('controller' => 'noticias','action' => 'index'));
 
     }

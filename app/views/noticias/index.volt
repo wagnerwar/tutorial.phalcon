@@ -1,5 +1,7 @@
 {{ content() }}
 <h1>Noticias para edicao</h1>
+{{ link_to("noticias/cad", 'CADASTRAR NOTICIA', "class": "btn btn-default") }}
+
 {% for noticia in page.items %}
     {% if loop.first %}
 <table class="table table-bordered table-striped" align="center">

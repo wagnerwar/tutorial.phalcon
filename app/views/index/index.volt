@@ -1,12 +1,11 @@
 
-<div class="row">
-<div class="col-md-4">
-  <h1>OI</h1>
-  <p>Seja bem-vindo a este painel de noticias</p>
-</div>
-<div class="col-md-4">
-<h1>Fique por dentro</h1>
-<p>de tudo o que rola no mundo</p>
 
+
+<div class="row">
+{% for noticia in noticias %}
+<div class="col-md-4">
+  <h1>{{ noticia['nome'] }}</h1>
+  <p>{{ noticia['descricao'] }}</p>
 </div>
+{% endfor %}
 </div>

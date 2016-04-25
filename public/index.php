@@ -24,10 +24,7 @@ try {
   * Read the configuration
   */
   $config = new ConfigIni(APP_PATH . 'app/config/config.ini');
-  if (is_readable(APP_PATH . 'app/config/config.ini.dev')) {
-    $override = new ConfigIni(APP_PATH . 'app/config/config.ini.dev');
-    $config->merge($override);
-  }
+  
   /*Carregando diretórios localizáveis.
   Desta forma, quando a aplicação procurar por algum controller ou alguma classe, irá buscar dentro destes diretórios
   */

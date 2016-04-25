@@ -14,6 +14,6 @@
      {% endif %}
  {% endfor %}
  {{ submit_button("Salvar", "class": "btn btn-success") }}
-
+{{ end_form() }}
 
 </fieldset>

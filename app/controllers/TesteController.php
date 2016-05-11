@@ -74,8 +74,12 @@ public function editandoAction(){
 
 }
 
-
+public function listagempdoAction(){
+    $dados = $this->db->query("select * from noticias");
+    $this->view->dados = $dados->fetchAll(); 
+}
     public function listagemAction(){
+
       $listagem = Noticias::find();
        $numberPage = $this->request->getQuery("page", "int") or 1;
             $paginator = new Paginator(array(
